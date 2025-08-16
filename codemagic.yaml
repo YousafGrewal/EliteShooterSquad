@@ -1,9 +1,52 @@
 workflows:
+  unity-ios:
+    name: Unity iOS Build
+    max_build_duration: 60
+    environment:
+      groups:
+        - unity_creds       # UNITY_EMAIL, UNITY_PASSWORD, UNITY_SERIAL (add in Codemagic -> Environment variables)
+        - app_store_creds   # APPLE_ID, APP_SPECIFIC_PASSWORD (for publishing)
+      vars:
+        UNITY_VERSION: 2021.3.0f1   # change to match your Unity version
+      xcode: latest
 
-    sample-workflow:
+    scripts:
+      - name: Activate Unity License
+        script: |
+          unity-editor \
+            -quit -batchmode -nographics \
+            -username "vectorviralgames@gmail.com" \
+            -password "Mlangbaba7642@1@1yousaf@1@1" \
+            -serial "$UNITY_SERIAL"
 
-        name: Codemagic Sample Workflow
+      - name: Build iOS project with Unity
+        script: |
+          unity-editor \
+            -quit -batchmode -nographics \
+            -projectPath . \
+            -buildTarget iOS \
+            -executeMethod BuildScript.BuildiOS
 
-        max_build_duration: 120
+      - name: Build IPA with Xcode
+        script: |
+          cd build/ios
+          xcodebuild \
+            -scheme Unity-iPhone \
+            -sdk iphoneos \
+            -configuration Release \
+            archive \
+            -archivePath $CM_BUILD_DIR/build/ios.xcarchive
+          xcodebuild \
+            -exportArchive \
+            -archivePath $CM_BUILD_DIR/build/ios.xcarchive \
+            -exportOptionsPlist ExportOptions.plist \
+            -exportPath $CM_BUILD_DIR/build/ios
 
-        instance_type: mac_mini_m2
+    artifacts:
+      - build/ios/*.ipa
+
+    publishing:
+      app_store_connect:
+        apple_id: yousefalzaabi6@icloud.com
+        app_specific_password: 112233
+        submit_to_testflight: true
