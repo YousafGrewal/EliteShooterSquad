@@ -1,0 +1,1712 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- Generated file, do not modify, your changes will be overwritten (use AssetPostprocessor.OnGeneratedCSProject) -->
+  <PropertyGroup>
+    <LangVersion>9.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <RootNamespace></RootNamespace>
+    <ProjectGuid>{A1D4A079-0C05-70A7-712A-B1F9409D55B4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <BaseDirectory>.</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\bin\Debug\</OutputPath>
+    <DefineConstants>UNITY_2022_3_61;UNITY_2022_3;UNITY_2022;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2022_3_OR_NEWER;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_EDITOR_GAME_SERVICES;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_ONSCREEN_KEYBOARD;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;ENABLE_NAVIGATION_PACKAGE_DEBUG_VISUALIZATION;ENABLE_NAVIGATION_HEIGHTMESH_RUNTIME_SUPPORT;ENABLE_NAVIGATION_UI_REQUIRES_PACKAGE;PLATFORM_IOS;TEXTCORE_1_0_OR_NEWER;ENABLE_RUNTIME_GI;ENABLE_GAMECENTER;ENABLE_NETWORK;ENABLE_IOS_ON_DEMAND_RESOURCES;ENABLE_IOS_APP_SLICING;PLAYERCONNECTION_LISTENS_FIXED_PORT;DEBUGGER_LISTENS_FIXED_PORT;PLATFORM_SUPPORTS_ADS_ID;SUPPORT_ENVIRONMENT_VARIABLES;PLATFORM_SUPPORTS_PROFILER;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_ETC_COMPRESSION;UNITY_IPHONE_API;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;UNITY_IOS;PLATFORM_IPHONE;UNITY_IPHONE;UNITY_HAS_GOOGLEVR;ENABLE_SPATIALTRACKING;ENABLE_MONO;NET_4_6;NET_UNITY_4_8;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;MODULE_INPUT_SYSTEM;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169;USG0001</NoWarn>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Temp\bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169;USG0001</NoWarn>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoConfig>true</NoConfig>
+    <NoStdLib>true</NoStdLib>
+    <AddAdditionalExplicitAssemblyReferences>false</AddAdditionalExplicitAssemblyReferences>
+    <ImplicitlyExpandNETStandardFacades>false</ImplicitlyExpandNETStandardFacades>
+    <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <UnityProjectGenerator>Package</UnityProjectGenerator>
+    <UnityProjectGeneratorVersion>2.0.22</UnityProjectGeneratorVersion>
+    <UnityProjectGeneratorStyle>Legacy</UnityProjectGeneratorStyle>
+    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityBuildTarget>iOS:9</UnityBuildTarget>
+    <UnityVersion>2022.3.61f1</UnityVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
+    <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Vibration\Vibration.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Upgrades\LavaLauncherUpgrade.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extended Editor\Attributes\BaseAttribute.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Scripts\UI\Custom UI Particle\UIParticleTrail.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Drop and Chests\CustomDropItem.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Weapon System\WeaponDatabase.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Scripts\Utils\FPSCounter.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Save Module\SavedDataContainer.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Tween\Cases\UITweenCases.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extended Editor\Modules\Core Organizer\Core Organizer.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Tutorial\LineNavigationArrowCase.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extended Editor\Attributes\DrawerAttributes\ReadOnlyFieldAttribute.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Scripts\Utils\DelayedObjectDisabler.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Advertisement\Scripts\Providers\IronSource\IronSourceContainer.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Weapon System\Gun\BaseGunBehavior.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Particle System\TrailParticleBehaviour.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extended Editor\Attributes\DrawerAttributes\ResizableTextAreaAttribute.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Settings Panel\Scripts\Animation\SettingsPositionAnimation.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Initialiser\Scripts\ScreenSettings.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Enemy\Grenader\GrenaderStates.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Drop and Chests\DropFallingStyle.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\UI\Pages\UIMainMenu.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Enemy\EnemyData.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Settings Panel\Scripts\Buttons\SettingsVibrationToggleButton.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Controllers\CustomMusicController.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Level System\RoomEnvironmentPresetType.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Other\ActionsMenu.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Level System\LevelController.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Advertisement\IDFA\Runtime\SkAdNetwork\SkAdNetworkBinding.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Camera\VirtualCameraCase.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Other\PedestalBehavior.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Weapon System\Bullet\PlayerBulletBehavior.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Tween\Easing\CustomEasingFunction.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Tween\DoTween\DoScaleTween.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Settings Panel\Scripts\Buttons\SettingsLinkButton.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extended Editor\Attributes\FieldDrawerAttribute.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Scripts\Utils\EnumUtils.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Scripts\Utils\TimeUtils.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extended Editor\Attributes\DrawConditionAttributes\ShowIfAttribute.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Level System\DropData.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Particle System\ParticlesController.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Level System\Minimap\LevelPreviewDefaultBehaviour.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Camera\CameraType.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Level System\LevelSave.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Save Module\Multiplatforms\WebGL\DefaultSaveWrapper.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Floating Text\FloatingTextHitBehaviour.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Level System\WorldData.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Tween\TweenCase.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Level System\Level Editor\LevelEditorItem.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Level System\Level Editor\LevelEditorEnemy.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Enemy\Demo\DemoStates.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Settings Panel\Scripts\Animation\SettingsScaleAnimation.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\UI Manager\UIController.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Scripts\Animations\JuicyBounce.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Settings Panel\Scripts\Animation\SettingsFadeAnimation.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Tween\DoTween\DoColorTween.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\UI\LevelSelection\VerticalScrollView\GridItem.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extended Editor\Attributes\DrawerAttributes\ButtonVisability.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Scripts\Security\SafeBool.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extended Editor\Attributes\MetaAttributes\OnValueChangedAttribute.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Tween\Cases\RectTransformTweenCases.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Characters\AimRingBehavior.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\IAP Module\Example\Scripts\IAPExampleScript.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Scripts\Security\SafeInt.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Currencies Module\Scripts\UI\CurrencyUIHelper.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Enemy\Boss\BossStateMachine.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extended Editor\Attributes\PropertyValidatorAttribute.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Enemy\EnemyController.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Enemy\Cowboy\CowboyStates.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\IAP Module\Scripts\BaseIAPWrapper.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Level System\ActiveRoom.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Scripts\Utils\RuntimeEditorUtils.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Enemy\Demo\DemoStateMachine.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Enemy\Range\RangeStateMachine.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Advertisement\Scripts\AdProviderHandler.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Level System\NavMesh\INavMeshAgent.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extended Editor\Attributes\DrawConditionAttributes\HideIfAttribute.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\IAP Module\Scripts\DummyIAPWrapper.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Tutorial\NavigationArrowController.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Tween\Cases\MaterialTweenCases.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\IAP Module\Scripts\IAPSettings.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Currencies Module\Scripts\CurrenciesController.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Save Module\Simple Save\SimpleLongSave.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Level System\NavMesh\NavMeshController.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Tween\Cases\SpriteRendererTweenCases.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Level System\LevelChestType.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Loading System\LoadingGraphics.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\IAP Module\Scripts\IAPManagerInitModule.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Save Module\GlobalSave.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Characters\Character.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Level System\Special Behaviours\LevelSpecialBehaviour.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Save Module\Multiplatforms\WebGL\BaseSaveWrapper.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Upgrades\BaseWeaponUpgrade.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extended Editor\Modules\Ragdoll Helper\RagdollHelper.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Drop and Chests\IDropableItem.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extended Editor\Attributes\DrawerAttributes\SliderAttribute.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Scripts\UI\UXButton.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Controllers\GameController.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Tween\TweenCaseFunction.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Characters\CharacterGlobalSave.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Advertisement\Scripts\Providers\UnityAds\UnityAdsLegacyContainer.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Advertisement\Scripts\Providers\Dummy\AdDummyHandler.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Advertisement\Scripts\AdsManagerInitModule.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Currencies Module\Scripts\UI\CurrenciesUIController.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\UI\DotsBackground.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Tutorial\ITutorial.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Controllers\BalanceController.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extended Editor\Attributes\NativePropertyDrawerAttribute.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Tutorial\TutorialID.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Enemy\Melee\MeleeEnemyBehaviour.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Scripts\UI\SmartToggle.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Enemy\Range\RangeEnemyBehaviour.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Level System\ItemEntityData.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Enemy\EliteCase.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Weapon System\Gun\TeslaGunBehavior.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Upgrades\Saves\UpgradeSavableObject.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Particle System\Ring Effect\RingEffectCase.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Level System\LevelData.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Drop and Chests\Items\WeaponCardDropBehaviour.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\IAP Module\Scripts\IAPManager.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Audio Controller\AudioCaseCustom.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Enemy\Boss\BossBombBehaviour.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Advertisement\IDFA\Runtime\iOSTransparency\ATTrackingStatusBinding.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Enemy\Cowboy\CowboyStateMachine.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Enemy\CapsuleSize.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Advertisement\IDFA\Runtime\AssemblyInfo.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Enemy\BossSniper\BossSniperLaserLine.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Tween\Tween.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\UI Manager\Overlay\SwapOverlayPanel.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\UI Manager\FloatingCloudSettings.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Enemy\Grenader\GrenaderStateMachine.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Loading System\GameLoadingInitModule.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extended Editor\Attributes\DrawerAttributes\ButtonVisabilityAttribute.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extended Editor\Attributes\DrawerAttributes\DrawerAttribute.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Enemy\EnemiesDatabase.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\UI\Pages\UICharacterSuggestion.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extended Editor\Attributes\GroupAttributes\BoxGroupAttribute.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Control System\ControlUtils.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Tween\Cases\TextTweenCases.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Control System\Control.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Weapon System\WeaponData.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Advertisement\Scripts\GDPRLoadingTask.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Scripts\Utils\SimpleCallback.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Upgrades\UpgradesDatabase.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Weapon System\Gun\LavaGunBehavior.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Settings Panel\Scripts\Buttons\SettingsSoundToggleButton.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Scripts\Utils\DuoTypes.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Characters\CharacterUpgrade.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Tutorial\TutorialArrowCase.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\UI\OverlayUI.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\UI Manager\IPopupWindow.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Particle System\ParticleBehaviour.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Loading System\GameLoading.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\UI\LevelSelection\VerticalScrollView\VerticalGridScrollView.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Enemy\BossSniper\BossSniperBehavior.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\PhysicsHelper.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Enemy\Melee\MeleeStates.cs" />
+    <Compile Include="Assets\Project Data\Game\Experience Module\Scripts\ExperienceStarsManager.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Player\HealthbarBehaviour.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extended Editor\Attributes\MethodDrawerAttribute.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Scripts\UI\Custom UI Particle\UIParticleSettings.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extended Editor\Attributes\ExtendedEditorAttribute.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\UI Manager\Helpers\RaycastGraphics.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Level System\LevelItem.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Control System\Gamepad\UIGamepadButton.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Enemy\Rifle\RifleEnemyBehavior.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Floating Message\Scripts\FloatingMessageInitModule.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Floating Text\FloatingTextFollowBehaviour.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Save Module\Simple Save\SimpleBoolSave.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Tween\Cases\SystemTweenCases.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Control System\Gamepad\GamepadData.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\UI Manager\Overlay\IOverlayPanel.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Control System\Gamepad\UIGamepadButtonTag.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Floating Text\Behaviours\FloatingTextFollowBehaviour.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Level System\RoomEnvironmentPreset.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Weapon System\Bullet\EnemyBulletBehavior.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Tutorial\NavigationArrowCase.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extended Editor\Attributes\GroupAttributes\GroupAttribute.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Control System\Gamepad\GamepadControl.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\UI\SparksUIAnimation.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\UI\UITouchHandler.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Enemy\State System\CommonStates.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Characters\EnemyDetector.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Characters\CharacterStageData.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extended Editor\Attributes\DrawerAttributes\ShowNonSerializedFieldAttribute.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Level System\Level Editor\EditorSceneScripts\EditorSceneController.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Weapon System\WeaponPanelUI.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Characters\CharacterGraphics.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Floating Text\FloatingTextController.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Advertisement\Scripts\Providers\Dummy\AdDummyContainer.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Currencies Module\Scripts\CurrenciesHelper.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Drop and Chests\DropAnimation.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Enemy\Grenader\GrenaderEnemyBehavior.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Enemy\Shotgunner\ShotgunnerStates.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Enemy\Sniper\SniperStateMachine.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Enemy\Rifle\RifleStateMachine.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Tween\TweenExtension.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Level System\Minimap\LevelType.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Tween\DoTween\DoRotateTween.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Define Manager\DefineAttribute.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\UI\Pages\UIGameOver.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Weapon System\WeaponType.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Advertisement\Scripts\AdsSettings.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Scripts\Utils\ToggleTypes.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Tween\Cases\RendererTweenCases.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Tutorial\Behaviours\FirstLevelTutorial.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\UI\Pages\UIComplete.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\UI Manager\World Space UI\WorldSpaceRaycaster.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Weapon System\Rarity.cs" />
+    <Compile Include="Assets\Project Data\Game\Experience Module\Scripts\ExperienceController.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Currencies Module\Scripts\UI\CurrencyUIPanelSimple.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\UI\LevelSelection\VerticalScrollView\GridRow.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Tutorial\TutorialHelper.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Settings Panel\Scripts\SettingsPanel.cs" />
+    <Compile Include="Assets\Project Data\Game\Experience Module\Scripts\ExperienceStarsFlightData.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Level System\NavMesh\NavMeshSurfaceTweenCase.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Drop and Chests\DropableItemSettings.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Floating Text\FloatingTextUpgradesBehaviour.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Characters\IEnemyDetector.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Enemy\Sniper\SniperEnemyBehavior.cs" />
+    <Compile Include="Assets\Project Data\Game\Experience Module\Scripts\IDistanceToggle.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Enemy\EnemyAnimationCallback.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Level System\Level Editor\LevelEditorChest.cs" />
+    <Compile Include="Assets\Project Data\Game\Experience Module\Scripts\ExperienceDatabase.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Weapon System\Gun\MiniGunBehavior.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Tween\Cases\GraphicTweenCases.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Enemy\BossSniper\BossSniperStates.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Level System\Minimap\LevelPreviewBaseBehaviour.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Advertisement\Scripts\AdProvider.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Control System\ControlInitModule.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Characters\CharacterDynamicAnimation.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Scripts\State System\StateBehavior.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\UI\TabAnimation.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Enemy\OffscreenEnemyIndicator.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Scripts\Utils\IOUtils.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Upgrades\MD_UpgradeType.cs" />
+    <Compile Include="Assets\Project Data\Game\Experience Module\Scripts\DistanceToggle.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\UI Manager\Overlay\DummyOverlayPanel.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Vibration\VibrationIntensity.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extended Editor\Attributes\PropertyGrouperAttribute.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\UI\Pages\UICharactersPanel.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Control System\Gamepad\GamepadButtonType.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Initialiser\Scripts\RegisterModuleAttribute.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extended Editor\Attributes\PropertyMetaAttribute.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Enemy\Shotgunner\ShotgunnerStateMachine.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Initialiser\Scripts\ProjectInitSettings.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Scripts\UI\Custom UI Particle\UIParticleSystem.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Characters\CharacterBehaviour.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Save Module\ISaveObject.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Drop and Chests\IDropItem.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Upgrades\TeslaGunUpgrade.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Scripts\Utils\TextureExtensions.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Level System\Level Editor\LevelEditorExitPoint.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Characters\CharacterType.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Upgrades\Examples\ExampleUpgrade.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Tween\Cases\CameraTweenCases.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Tween\Cases\ImageTweenCases.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\UI\LevelProgressionPanel.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\IAP Module\Scripts\IAPCanvas.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Tween\Cases\AnimationTweenCases.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Serializer\Serializer.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Player\CharacterAnimationHandler.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Controllers\CurrencyDropItem.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Pool Manager\PoolManager.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Controllers\DifficultySettings.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\UI\PreviewCase.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Upgrades\BaseUpgrade.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Save Module\Simple Save\SimpleFloatSave.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\UI\Pages\UIExamplePage.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\UI\UIHelper.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Tutorial\BaseNavigationArrowCase.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Control System\Keyboard\KeyboardControl.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\UI Manager\Overlay\Overlay.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Upgrades\BaseUpgradeStage.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Advertisement\GDPR\GDPRPanel.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\UI\Pages\RewardedVideoButton.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Upgrades\MinigunUpgrade.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Audio Controller\MD_Sounds.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\IAP Module\Scripts\MD_ProductKeyType.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Tween\Easing\Ease.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Enemy\Demo\DemoEnemyBehavior.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Enemy\Rifle\RifleStates.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Level System\Minimap\LevelPreviewBossBehaviour.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Drop and Chests\DropableItemType.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\IAP Module\Example\Scripts\ItemPanelScript.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Level System\Minimap\LevelTypeSettings.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Level System\Minimap\LevelPreviewSimpleBehaviour.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Pool Manager\Pool.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\UI\UIUpgradeAbstractPanel.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\UI Manager\Overlay\FadeOverlayPanel.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Loading System\LoadingTask.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Audio Controller\AudioControllerInitModule.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Enemy\Range\RangeStates.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Weapon System\WeaponsController.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Level System\Drop.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Drop and Chests\RewardedChestBehavior.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Characters\CharactersController.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Control System\IControlBehavior.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\UI Manager\Components\UIScaleAnimation.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Settings Panel\Scripts\Buttons\SettingsNoAdsButton.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Enemy\Cowboy\CowboyEnemyBehavior.cs" />
+    <Compile Include="Assets\Project Data\Game\Experience Module\Scripts\ExperienceSave.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Scripts\UI\Custom UI Particle\UIParticle.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Other\ObjectEnabler.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\UI\UIRoomIndicator.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Weapon System\Grenade\GrenadeBehavior.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Initialiser\Scripts\Initialiser.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extended Editor\Attributes\DrawerAttributes\ButtonAttribute.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Level System\LevelsDatabase.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Audio Controller\AudioSave.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Scripts\Security\SafeFloat.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Weapon System\Bullet\ShotgunBulletBehavior.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Weapon System\Gun\ShotgunBehavior.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\UI\Pages\UIGame.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Advertisement\Example\AdsManagerExampleScript.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extended Editor\Attributes\HelpButtonAttribute.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Enemy\WeaponCase.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\IAP Module\Scripts\IAPItem.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Scripts\Animations\FracturedExplosion.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Tween\Cases\TransformTweenCases.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Upgrades\Upgrade.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Advertisement\Scripts\Providers\UnityAds\UnityAdsLegacyHandler.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extended Editor\Attributes\DrawerAttributes\EnumFlagsAttribute.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Advertisement\Scripts\Providers\Dummy\AdDummyController.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extended Editor\Attributes\DrawConditionAttributes\DrawConditionAttribute.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Scripts\UI\CameraCorners.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Tween\Cases\AudioTweenCases.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extended Editor\Attributes\DecoratorAttributes\LineSpacerAttribute.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\UI\LevelSelection\LevelCellBehavior.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extended Editor\Attributes\PropertyDrawConditionAttribute.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Currencies Module\Scripts\MD_CurrencyType.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Scripts\Utils\ReflectionUtils.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\UI\UILevelNumberText.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Tween\Easing\EasingSettings.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Currencies Module\Scripts\CurrencyPrice.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\UI Manager\World Space UI\WorldSpaceButton.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Tutorial\TutorialBaseSave.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Weapon System\WeaponTab.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Audio Controller\MD_Music.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Setup Guide\SetupTabAttribute.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Weapon System\Bullet\MinigunBulletBehavior.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Level System\ChestEntityData.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Particle System\ParticleCase.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Control System\Joystick\Scripts\Joystick.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Settings Panel\Scripts\Buttons\SettingsButtonBase.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Enemy\Melee\MeleeStateMachine.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Level System\NavMesh\NavMeshCallback.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Scripts\UI\UXButtonAnimator.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Tween\Cases\ParticleTweenCases.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\UI\FlyingTextBehavior.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Tween\DoTween\DoFadeTween.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Initialiser\Scripts\InitModule.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Floating Text\Behaviours\FloatingTextHitBehaviour.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Level System\ChestData.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Weapon System\Bullet\LavaBulletBehavior.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\UI\AttackButtonBehavior.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Drop and Chests\InGameChestBehavior.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Save Module\Simple Save\SimpleIntSave.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Characters\CharacterPanelUI.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Particle System\Ring Effect\RingEffectController.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Scripts\UI\ClickZone.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Floating Message\Scripts\FloatingMessage.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Tween\TweenCaseCollection.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\UI\Pages\UIUpgradesAbstractPage.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Weapon System\Bullet\TeslaBulletBehavior.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Save Module\Simple Save\SimpleStringSave.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Characters\CharacterTab.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Tween\TweenInitModule.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extended Editor\Attributes\DrawerAttributes\DrawReferenceAttribute.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Particle System\Particle.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Scripts\UI\SlicedFilledImage.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Tween\DoTween\DoAnchoredPositionTween.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Pool Manager\PooledObjectSettings.cs" />
+    <Compile Include="Assets\Project Data\Game\Experience Module\Scripts\ExperienceLevelData.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Drop and Chests\AbstractChestBehavior.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Tutorial\BaseTutorial.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Tutorial\Behaviours\CharacterUpgradeTutorial.cs" />
+    <Compile Include="Assets\Project Data\Game\Experience Module\Scripts\ExperienceUIController.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extended Editor\Attributes\DrawerAttributes\ReorderableListAttribute.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Characters\CharacterStats.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Tween\DoTween\DoTween.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Drop and Chests\ItemDropBehaviour.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Enemy\Shotgunner\ShotgunerEnemyBehavior.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\UI\BackgroundUI.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\UI\DroppedCardPanel.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Tutorial\TutorialController.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Drop and Chests\HealDropBehaviour.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Settings Panel\Scripts\Animation\SettingsAnimation.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Enemy\EnemyType.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\UI\UIMainMenuButton.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Enemy\Boss\BossStates.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Pool Manager\PoolSettings.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Characters\CharactersDatabase.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\UI Manager\UIPage.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Audio Controller\AudioCase.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extended Editor\Attributes\DrawerAttributes\MinMaxSliderAttribute.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Level System\LevelItemType.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Upgrades\IUpgrade.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Level System\ExitPointBehaviour.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Enemy\Sniper\SniperStates.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Enemy\Boss\BossBomberBehaviour.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extended Editor\Attributes\MetaAttributes\InfoBoxAttribute.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\UI\UIGeneralPowerIndicator.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Audio Controller\AudioController.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Currencies Module\Scripts\Currency.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Advertisement\Scripts\AdsManager.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Audio Controller\AudioSettings.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Floating Text\Behaviours\FloatingTextUpgradesBehaviour.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Settings Panel\Scripts\Buttons\SettingsRestoreButton.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extended Editor\Attributes\MetaAttributes\MetaAttribute.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Characters\CharacterSave.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Upgrades\ShotgunUpgrade.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Save Module\Multiplatforms\WebGL\WebGLSaveWrapper.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\UI\Pages\UIWeaponPage.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Enemy\RagdollBehavior.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Camera\CameraController.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Enemy\EnemyStats.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Tutorial\TutorialLabelBehaviour.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Scripts\State System\AbstractStateMachine.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\UI Manager\Components\UIFadeAnimation.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Scripts\Utils\UIUtils.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Characters\BaseCharacterGraphics.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Level System\EnemyEntityData.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Level System\CustomObjectData.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Scripts\Animations\SimpleBounce.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Advertisement\Scripts\Providers\AdMob\AdMobHandler.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Characters\MovementSettings.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Enemy\BossSniper\BossSniperStateMachine.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Floating Text\Behaviours\FloatingTextBehaviour.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Level System\RoomData.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Scripts\Utils\CoreExtensions.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\IAP Module\Scripts\IAPWrapper.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\UI Manager\FloatingCloud.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Upgrades\UpgradesController.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Advertisement\Scripts\Providers\AdMob\AdMobContainer.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Other\CurrencyExtended.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Pool Manager\PoolGeneric.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Weapon System\RarityData.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Drop and Chests\BaseDropBehaviour.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Scripts\Utils\Bezier.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\UI Manager\NotchSafeArea.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Currencies Module\Scripts\UI\CurrencyUI.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Enemy\BaseEnemyBehaviour.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Advertisement\Scripts\AdType.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Advertisement\Scripts\Providers\IronSource\IronSourceHandler.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Level System\Level Editor\EditorSceneScripts\StartPointHandles.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Weapon System\Bullet\BossSniperBulletBehavior.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Tween\Easing\AnimationCurveEasingFunction.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Floating Text\FloatingTextBaseBehaviour.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Weapon System\WeaponSave.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Level System\GameSettings.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extended Editor\Attributes\PropertyDrawerAttribute.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Floating Text\FloatingTextCase.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Scripts\UI\BaseButton.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Save Module\SaveController.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Tutorial\Behaviours\WeaponUpgradeTutorial.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Level System\WorldType.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Tutorial\TutorialCanvasController.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Weapon System\WeaponRigBehavior.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Level System\GateExitPointBehaviour.cs" />
+    <Compile Include="Assets\Project Data\Game\Scripts\Level System\Special Behaviours\TutorialLevelSpecialBehaviour.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Currencies Module\Scripts\UI\UICurrencyButton.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Modules\Currencies Module\Scripts\CurrenciesDatabase.cs" />
+    <Compile Include="Assets\Project Data\Watermelon Core\Extra Components\Control System\InputType.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Project Data\Watermelon Core\Shaders\Universal.shader" />
+    <None Include="Assets\Project Data\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\Project Data\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\Project Data\Watermelon Core\Shaders\Includes\Params.hlsl" />
+    <None Include="Assets\Project Data\TextMesh Pro\Shaders\TMP_SDF-Mobile-2-Pass.shader" />
+    <None Include="Assets\Project Data\Watermelon Core\Shaders\Includes\Fog.hlsl" />
+    <None Include="Assets\Project Data\Watermelon Core\Shaders\Includes\RimLighting.hlsl" />
+    <None Include="Assets\Project Data\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\Project Data\Watermelon Core\Shaders\Includes\Curve.hlsl" />
+    <None Include="Assets\Project Data\Template Changelog.txt" />
+    <None Include="Assets\Project Data\Watermelon Core\Shaders\Includes\Lighting.hlsl" />
+    <None Include="Assets\Project Data\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\Project Data\Watermelon Core\Shaders\Includes\Shadow Atten\Shadow Atten.hlsl" />
+    <None Include="Assets\Project Data\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\Project Data\Game\Shaders\Includes\Lighting.hlsl" />
+    <None Include="Assets\Project Data\Watermelon Core\Extended Editor\Modules\Manifest Generator\AndroidManifestTemplate.txt" />
+    <None Include="Assets\Project Data\Watermelon Core\Shaders\Includes\Light Dir\Light Dir.hlsl" />
+    <None Include="Assets\Project Data\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\Project Data\TextMesh Pro\Shaders\SDFFunctions.hlsl" />
+    <None Include="Assets\Project Data\Watermelon Core\Shaders\Includes\Rim.hlsl" />
+    <None Include="Assets\Project Data\DOCUMENTATION.txt" />
+    <None Include="Assets\Project Data\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\Project Data\Watermelon Core\Shaders\Includes\Utils.hlsl" />
+    <None Include="Assets\Project Data\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\Project Data\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\Project Data\TextMesh Pro\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\Project Data\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets\Project Data\Game\Shaders\Includes\RimLighting.hlsl" />
+    <None Include="Assets\Project Data\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\Project Data\Watermelon Core\Shaders\Includes\Toon.hlsl" />
+    <None Include="Assets\Project Data\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\Project Data\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\Project Data\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\Project Data\Game\Shaders\Includes\Fog.hlsl" />
+    <None Include="Assets\Project Data\Watermelon Core\Shaders\Includes\Light Color\Light Color.hlsl" />
+    <None Include="Assets\Project Data\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\Project Data\Watermelon Core\Core Changelog.txt" />
+    <None Include="Assets\Project Data\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\Project Data\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\Project Data\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\Project Data\Watermelon Core\Shaders\Includes\LightColor.hlsl" />
+    <None Include="Assets\Project Data\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\Project Data\Watermelon Core\Shaders\Includes\Emission.hlsl" />
+    <None Include="Assets\Project Data\Watermelon Core\Shaders\Includes\Shadows.hlsl" />
+    <None Include="Assets\Project Data\TextMesh Pro\Shaders\TMP_Sprite.shader" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="UnityEngine">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AIModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.AIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ARModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.ARModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AccessibilityModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.AccessibilityModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AndroidJNIModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.AndroidJNIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.AnimationModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.AssetBundleModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.AudioModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.ClothModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ContentLoadModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.ContentLoadModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CrashReportingModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.CrashReportingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.DSPGraphModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.DSPGraphModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.DirectorModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.DirectorModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.GIModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.GIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.GameCenterModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.GameCenterModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.GridModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.GridModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.HotReloadModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.HotReloadModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.ImageConversionModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.InputModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.InputLegacyModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.JSONSerializeModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.LocalizationModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.LocalizationModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.ParticleSystemModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PerformanceReportingModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.PerformanceReportingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.PhysicsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.Physics2DModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ProfilerModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.ProfilerModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PropertiesModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.PropertiesModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.ScreenCaptureModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.SharedInternalsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.SpriteMaskModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteShapeModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.SpriteShapeModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.StreamingModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.StreamingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SubstanceModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.SubstanceModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SubsystemsModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.SubsystemsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TLSModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.TLSModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.TerrainModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreFontEngineModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.TextCoreFontEngineModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreTextEngineModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.TextCoreTextEngineModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.TilemapModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.UIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.UIElementsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UmbraModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.UmbraModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsCommonModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityAnalyticsCommonModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityConnectModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityCurlModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityCurlModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityTestProtocolModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityWebRequestModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VFXModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.VFXModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.VRModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VehiclesModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.VehiclesModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.VideoModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.WindModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.WindModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.XRModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEngine.XRModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEditor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.CoreModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEditor.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.DeviceSimulatorModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEditor.DeviceSimulatorModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.DiagnosticsModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEditor.DiagnosticsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.EditorToolbarModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEditor.EditorToolbarModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.GraphViewModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEditor.GraphViewModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.PresetsUIModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEditor.PresetsUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.QuickSearchModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEditor.QuickSearchModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.SceneTemplateModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEditor.SceneTemplateModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.SceneViewModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEditor.SceneViewModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.TextCoreFontEngineModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEditor.TextCoreFontEngineModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.TextCoreTextEngineModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEditor.TextCoreTextEngineModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.UIBuilderModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIBuilderModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.UIElementsModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.UIElementsSamplesModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsSamplesModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.UnityConnectModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sentry">
+      <HintPath>Packages\com.bezi.sidekick\Plugins\Sentry.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sentry.System.Numerics.Vectors">
+      <HintPath>Packages\com.bezi.sidekick\Plugins\Sentry.System.Numerics.Vectors.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Collections.Immutable">
+      <HintPath>Packages\com.bezi.sidekick\Plugins\System.Collections.Immutable.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SharpToken">
+      <HintPath>Packages\com.bezi.sidekick\Plugins\SharpToken.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ReportGeneratorMerged">
+      <HintPath>Library\PackageCache\com.unity.testtools.codecoverage@1.2.6\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.Metadata">
+      <HintPath>Packages\com.bezi.sidekick\Plugins\System.Reflection.Metadata.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sentry.System.Memory">
+      <HintPath>Packages\com.bezi.sidekick\Plugins\Sentry.System.Memory.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sentry.System.Runtime.CompilerServices.Unsafe">
+      <HintPath>Packages\com.bezi.sidekick\Plugins\Sentry.System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sentry.System.Collections.Immutable">
+      <HintPath>Packages\com.bezi.sidekick\Plugins\Sentry.System.Collections.Immutable.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="bezi-websocket-sharp">
+      <HintPath>Packages\com.bezi.sidekick\Plugins\bezi-websocket-sharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.4\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sentry.System.Buffers">
+      <HintPath>Packages\com.bezi.sidekick\Plugins\Sentry.System.Buffers.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+      <HintPath>Packages\com.bezi.sidekick\Plugins\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sentry.System.Reflection.Metadata">
+      <HintPath>Packages\com.bezi.sidekick\Plugins\Sentry.System.Reflection.Metadata.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp">
+      <HintPath>Packages\com.bezi.sidekick\Plugins\Microsoft.CodeAnalysis.CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sentry.System.Text.Json">
+      <HintPath>Packages\com.bezi.sidekick\Plugins\Sentry.System.Text.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis">
+      <HintPath>Packages\com.bezi.sidekick\Plugins\Microsoft.CodeAnalysis.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sentry.System.Text.Encodings.Web">
+      <HintPath>Packages\com.bezi.sidekick\Plugins\Sentry.System.Text.Encodings.Web.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sentry.System.Threading.Tasks.Extensions">
+      <HintPath>Packages\com.bezi.sidekick\Plugins\Sentry.System.Threading.Tasks.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sentry.Microsoft.Bcl.AsyncInterfaces">
+      <HintPath>Packages\com.bezi.sidekick\Plugins\Sentry.Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Android.Types">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Android.Gradle">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Gradle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Android.GradleProject">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.GradleProject.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="mscorlib">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\mscorlib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.Runtime.Serialization.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.Xml.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.Xml.Linq.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Numerics">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.Numerics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Numerics.Vectors">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.Numerics.Vectors.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.Net.Http.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.IO.Compression.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Microsoft.CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.Data.DataSetExtensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.Drawing.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.IO.Compression.FileSystem.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.ComponentModel.Composition.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Transactions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.Transactions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Primitives">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\Microsoft.Win32.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="netstandard">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\netstandard.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.AppContext">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.AppContext.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Buffers">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Buffers.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Collections.Concurrent">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Collections.Concurrent.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Collections">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Collections.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Collections.NonGeneric">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Collections.NonGeneric.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Collections.Specialized">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Collections.Specialized.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ComponentModel.Annotations.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ComponentModel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.EventBasedAsync">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ComponentModel.EventBasedAsync.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.Primitives">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ComponentModel.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.TypeConverter">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ComponentModel.TypeConverter.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Console">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Console.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.Common">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Data.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.Contracts">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Diagnostics.Contracts.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.Debug">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Diagnostics.Debug.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.FileVersionInfo">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Diagnostics.FileVersionInfo.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.Process">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Diagnostics.Process.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.StackTrace">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Diagnostics.StackTrace.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.TextWriterTraceListener">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Diagnostics.TextWriterTraceListener.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.Tools">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Diagnostics.Tools.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.TraceSource">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Diagnostics.TraceSource.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing.Primitives">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Drawing.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Dynamic.Runtime">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Dynamic.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Globalization.Calendars">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Globalization.Calendars.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Globalization">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Globalization.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Globalization.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Globalization.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression.ZipFile">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.Compression.ZipFile.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.FileSystem.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.DriveInfo">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.FileSystem.DriveInfo.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Watcher">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.FileSystem.Watcher.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.IsolatedStorage">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.IsolatedStorage.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.MemoryMappedFiles">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.MemoryMappedFiles.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.Pipes">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.Pipes.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.UnmanagedMemoryStream">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.UnmanagedMemoryStream.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Linq">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Linq.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Linq.Expressions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Linq.Expressions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Linq.Parallel">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Linq.Parallel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Linq.Queryable">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Linq.Queryable.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Memory">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Memory.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Rtc">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Net.Http.Rtc.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.NameResolution">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Net.NameResolution.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.NetworkInformation">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Net.NetworkInformation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Ping">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Net.Ping.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Primitives">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Net.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Requests">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Net.Requests.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Security">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Net.Security.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Sockets">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Net.Sockets.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.WebHeaderCollection">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Net.WebHeaderCollection.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.WebSockets.Client">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Net.WebSockets.Client.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.WebSockets">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Net.WebSockets.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ObjectModel">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ObjectModel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.DispatchProxy">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Reflection.DispatchProxy.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Reflection.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.Emit">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Reflection.Emit.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.Emit.ILGeneration">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Reflection.Emit.ILGeneration.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.Emit.Lightweight">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Reflection.Emit.Lightweight.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Reflection.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.Primitives">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Reflection.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Resources.Reader">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Resources.Reader.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Resources.ResourceManager">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Resources.ResourceManager.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Resources.Writer">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Resources.Writer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.VisualC">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.CompilerServices.VisualC.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Handles">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.Handles.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.InteropServices.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.WindowsRuntime">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.InteropServices.WindowsRuntime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Numerics">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.Numerics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Formatters">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.Serialization.Formatters.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Json">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.Serialization.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Primitives">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.Serialization.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Xml">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.Serialization.Xml.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Claims">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Security.Claims.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Csp">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Security.Cryptography.Csp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Principal">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Security.Principal.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.SecureString">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Security.SecureString.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel.Duplex">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ServiceModel.Duplex.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel.Http">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ServiceModel.Http.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel.NetTcp">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ServiceModel.NetTcp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel.Primitives">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ServiceModel.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel.Security">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ServiceModel.Security.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Text.Encoding">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Text.Encoding.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Text.Encoding.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Text.Encoding.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Text.RegularExpressions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Text.RegularExpressions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Threading.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Overlapped">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Threading.Overlapped.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Threading.Tasks.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Threading.Tasks.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Parallel">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Threading.Tasks.Parallel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Thread">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Threading.Thread.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.ThreadPool">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Threading.ThreadPool.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Timer">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Threading.Timer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ValueTuple">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ValueTuple.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.ReaderWriter">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Xml.ReaderWriter.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.XDocument">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Xml.XDocument.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.XmlDocument">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Xml.XmlDocument.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.XmlSerializer">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Xml.XmlSerializer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.XPath">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Xml.XPath.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.XPath.XDocument">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.61f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Xml.XPath.XDocument.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.EditorCoroutines.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.AI.Navigation">
+      <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Burst.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Burst">
+      <HintPath>Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Animation.Rigging.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Animation.Rigging.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Timeline.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Shared.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.ShaderGraph.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualStudio.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Core">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Core.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Rider.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Config.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Config.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.2D.Internal">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.2D.Internal.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Flow">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Flow.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Mathematics.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Timeline">
+      <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.InputSystem">
+      <HintPath>Library\ScriptAssemblies\Unity.InputSystem.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.InputSystem.ForUI">
+      <HintPath>Library\ScriptAssemblies\Unity.InputSystem.ForUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
+      <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Performance.Profile-Analyzer.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.TestTools.CodeCoverage.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
+      <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.AI.Navigation.Updater">
+      <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.Updater.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.PlasticSCM.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.State.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PPv2URPConverters">
+      <HintPath>Library\ScriptAssemblies\PPv2URPConverters.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Mathematics">
+      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Searcher.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Shaders">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.AI.Navigation.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.State">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
+      <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VSCode.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Animation.Rigging">
+      <HintPath>Library\ScriptAssemblies\Unity.Animation.Rigging.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="GenerateTargetFrameworkMonikerAttribute" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

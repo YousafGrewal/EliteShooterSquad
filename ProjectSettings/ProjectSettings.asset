@@ -11,9 +11,9 @@ PlayerSettings:
   defaultScreenOrientation: 0
   targetDevice: 2
   useOnDemandResources: 0
-  accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: EliteShooterSquad
+  accelerometerFrequency: 0
+  companyName: dumiapps
+  productName: Hellshooting Fire
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -22,7 +22,7 @@ PlayerSettings:
   m_SplashScreenOverlayOpacity: 1
   m_SplashScreenAnimation: 1
   m_SplashScreenLogoStyle: 1
-  m_SplashScreenDrawMode: 0
+  m_SplashScreenDrawMode: 1
   m_SplashScreenBackgroundAnimationZoom: 1
   m_SplashScreenLogoAnimationZoom: 1
   m_SplashScreenBackgroundLandscapeAspect: 1
@@ -39,8 +39,11 @@ PlayerSettings:
     y: 0
     width: 1
     height: 1
-  m_SplashScreenLogos: []
-  m_VirtualRealitySplashScreen: {fileID: 0}
+  m_SplashScreenLogos:
+  - logo: {fileID: 10404, guid: 0000000000000000f000000000000000, type: 0}
+    duration: 2
+  m_VirtualRealitySplashScreen: {fileID: 2800000, guid: 777e3ab195990584b80e3b1f83d4bf0a,
+    type: 3}
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1024
   defaultScreenHeight: 768
@@ -82,7 +85,7 @@ PlayerSettings:
   macRetinaSupport: 1
   runInBackground: 1
   captureSingleScreen: 0
-  muteOtherAudioSources: 0
+  muteOtherAudioSources: 1
   Prepare IOS For Recording: 0
   Force IOS Speakers When Recording: 0
   audioSpatialExperience: 0
@@ -141,7 +144,7 @@ PlayerSettings:
   loadStoreDebugModeEnabled: 0
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
-  bundleVersion: 1.2.8
+  bundleVersion: 0.1
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -165,7 +168,7 @@ PlayerSettings:
   applicationIdentifier:
     Android: com.templates.squadshooter
     Standalone: com.templates.squadshooter
-    iPhone: com.templates.squadshooter
+    iPhone: com.dumiapps.hellshooting.shooter.fire
   buildNumber:
     Standalone: 0
     VisionOS: 0
@@ -242,14 +245,14 @@ PlayerSettings:
   metalCompileShaderBinary: 0
   iOSRenderExtraFrameOnPause: 0
   iosCopyPluginsCodeInsteadOfSymlink: 0
-  appleDeveloperTeamID: 
-  iOSManualSigningProvisioningProfileID: 
+  appleDeveloperTeamID: 3RZ5VN438K
+  iOSManualSigningProvisioningProfileID: df13fcb1-d7f3-41a1-8544-34cd041a10f3
   tvOSManualSigningProvisioningProfileID: 
   VisionOSManualSigningProvisioningProfileID: 
-  iOSManualSigningProvisioningProfileType: 0
+  iOSManualSigningProvisioningProfileType: 2
   tvOSManualSigningProvisioningProfileType: 0
   VisionOSManualSigningProvisioningProfileType: 0
-  appleEnableAutomaticSigning: 0
+  appleEnableAutomaticSigning: 2
   iOSRequireARKit: 0
   iOSAutomaticallyDetectAndAddCapabilities: 1
   appleEnableProMotion: 0
@@ -293,7 +296,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: c8065d9fca68cf74c98b7704fce76a1e, type: 3}
+      m_Icon: {fileID: 2800000, guid: 777e3ab195990584b80e3b1f83d4bf0a, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
@@ -955,7 +958,7 @@ PlayerSettings:
   cloudProjectId: 08fa508c-4b6d-41fa-90db-b38d54d8bba2
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Spider Fighter
+  projectName: EliteShooterSquad
   organizationId: braincord-78d07579-f3b2-434b-b83a-d4df54300363
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 1
