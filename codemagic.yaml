@@ -47,6 +47,6 @@ workflows:
 
     publishing:
       app_store_connect:
-        apple_id: $APPLE_ID
-        app_specific_password: $APP_SPECIFIC_PASSWORD
+        apple_id: yousefalzaabi6@icloud.com
+        app_specific_password: 41Aa4141
         submit_to_testflight: true
