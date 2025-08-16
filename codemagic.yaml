@@ -48,5 +48,5 @@ workflows:
     publishing:
       app_store_connect:
         apple_id:"yousefalzaabi6@icloud.com"
-        app_specific_password:"112233"
+        app_specific_password:"41Aa4141"
         submit_to_testflight: true
