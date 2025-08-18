@@ -45,9 +45,5 @@ workflows:
     artifacts:
       - build/ios/*.ipa
 
-    publishing:
-      app_store_connect:
-        apple_id: "yousefalzaabi6@icloud.com"
-        password: 41Aa4141
-        submit_to_testflight: true
+    
    
