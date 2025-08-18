@@ -1,6 +1,12 @@
 #!/bin/bash
 set -euo pipefail  # safer strict mode
 
+# Ensure fastlane exists
+if ! command -v fastlane &> /dev/null; then
+  echo "📦 Installing fastlane..."
+  gem install fastlane --no-document
+fi
+
 echo "🚀 Starting upload to App Store Connect..."
 
 # --- Configuration ---
@@ -21,12 +27,10 @@ if [ -z "$API_KEY_ID" ]; then
   echo "❌ Missing APP_STORE_CONNECT_API_KEY"
   exit 1
 fi
-
 if [ -z "$ISSUER_ID" ]; then
   echo "❌ Missing APP_STORE_CONNECT_ISSUER_ID"
   exit 1
 fi
-
 if [ -z "$PRIVATE_KEY" ]; then
   echo "❌ Missing APP_STORE_CONNECT_PRIVATE_KEY"
   exit 1
@@ -69,13 +73,15 @@ fi
 
 echo "✅ Private key saved and validated."
 
-# --- Upload with iTMSTransporter (supported tool) ---
-echo "📤 Uploading IPA to TestFlight via iTMSTransporter..."
+# --- Upload with Fastlane ---
+echo "📤 Uploading IPA to TestFlight via Fastlane Deliver..."
 
-if xcrun iTMSTransporter -m upload \
-  -assetFile "$IPA_PATH" \
-  -apiKey "$API_KEY_ID" \
-  -apiIssuer "$ISSUER_ID"; then
+if fastlane deliver \
+  --api_key_path "$KEY_FILE" \
+  --ipa "$IPA_PATH" \
+  --skip_metadata true \
+  --skip_screenshots true \
+  --force; then
   echo "✅ Successfully uploaded to App Store Connect!"
   echo "📲 Your build is now processing. Check TestFlight dashboard:"
   echo "👉 https://appstoreconnect.apple.com/apps"
