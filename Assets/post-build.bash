@@ -55,8 +55,8 @@ echo "✅ IPA found: $IPA_PATH"
 PRIVATE_KEY_FILE=$(mktemp -t authkey-XXXXXX.p8)
 trap 'rm -f "$PRIVATE_KEY_FILE"' EXIT
 
-# Write key with proper newline and validate format
-printf '%s\n' "$PRIVATE_KEY" > "$PRIVATE_KEY_FILE"
+# Write key with proper newline (handles \n escaped newlines)
+echo "${PRIVATE_KEY//\\n/$'\n'}" > "$PRIVATE_KEY_FILE"
 
 # Ensure file was written
 if [ ! -s "$PRIVATE_KEY_FILE" ]; then
