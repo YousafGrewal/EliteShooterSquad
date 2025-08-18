@@ -1,91 +1,85 @@
 #!/bin/bash
-set -e  # Exit immediately if a command fails
-set -u  # Error on undefined variables
+set -euo pipefail  # safer strict mode
 
 echo "🚀 Starting upload to App Store Connect..."
 
 # --- Configuration ---
-IPA_DIR="$WORKSPACE/.build/last"
-IPA_PATH="${IPA_PATH:-$(find "$IPA_DIR" -name "*.ipa" -type f | head -n 1)}"
+IPA_DIR="${WORKSPACE:-$PWD}/.build/last"
+IPA_PATH="${IPA_PATH:-}"
 
-API_KEY_ID="${APP_STORE_CONNECT_API_KEY}"
-ISSUER_ID="${APP_STORE_CONNECT_ISSUER_ID}"
-PRIVATE_KEY="${APP_STORE_CONNECT_PRIVATE_KEY}"
+# Auto-detect IPA if not provided
+if [ -z "$IPA_PATH" ]; then
+  IPA_PATH=$(find "$IPA_DIR" -type f -name "*.ipa" | head -n 1 || true)
+fi
+
+API_KEY_ID="${APP_STORE_CONNECT_API_KEY:-}"
+ISSUER_ID="${APP_STORE_CONNECT_ISSUER_ID:-}"
+PRIVATE_KEY="${APP_STORE_CONNECT_PRIVATE_KEY:-}"
 
 # --- Validate Required Secrets ---
 if [ -z "$API_KEY_ID" ]; then
-  echo "❌ Error: APP_STORE_CONNECT_API_KEY is missing!"
+  echo "❌ Missing APP_STORE_CONNECT_API_KEY"
   exit 1
 fi
 
 if [ -z "$ISSUER_ID" ]; then
-  echo "❌ Error: APP_STORE_CONNECT_ISSUER_ID is missing!"
+  echo "❌ Missing APP_STORE_CONNECT_ISSUER_ID"
   exit 1
 fi
 
 if [ -z "$PRIVATE_KEY" ]; then
-  echo "❌ Error: APP_STORE_CONNECT_PRIVATE_KEY is missing!"
+  echo "❌ Missing APP_STORE_CONNECT_PRIVATE_KEY"
   exit 1
 fi
 
-# --- Debug: List files in build directory ---
-echo "📁 Checking contents of $IPA_DIR:"
-if [ -d "$IPA_DIR" ]; then
-  find "$IPA_DIR" -type f -name "*.ipa" -o -name "*.app" | xargs ls -la
-else
-  echo "❌ Directory not found: $IPA_DIR"
+# --- Debug IPA Directory ---
+if [ ! -d "$IPA_DIR" ]; then
+  echo "❌ IPA directory not found: $IPA_DIR"
   exit 1
 fi
+
+echo "📁 IPA directory contents:"
+find "$IPA_DIR" -type f -name "*.ipa" -exec ls -lh {} \;
 
 # --- Validate IPA File ---
-if [ -z "$IPA_PATH" ]; then
+if [ -z "$IPA_PATH" ] || [ ! -f "$IPA_PATH" ]; then
   echo "❌ No .ipa file found in $IPA_DIR"
-  echo "💡 Ensure Unity is set to 'Create IPA' and builds an Archive."
-  exit 1
-fi
-
-if [ ! -f "$IPA_PATH" ]; then
-  echo "❌ IPA file does not exist: $IPA_PATH"
+  echo "💡 Ensure Unity build produces an IPA archive."
   exit 1
 fi
 
 echo "✅ IPA found: $IPA_PATH"
 
-# --- Save Private Key to Temp File ---
-PRIVATE_KEY_FILE=$(mktemp -t authkey-XXXXXX.p8)
-trap 'rm -f "$PRIVATE_KEY_FILE"' EXIT
+# --- Save Private Key ---
+KEY_DIR="$HOME/.appstoreconnect/private_keys"
+KEY_FILE="$KEY_DIR/AuthKey_$API_KEY_ID.p8"
 
-# Write key with proper newline (handles \n escaped newlines)
-echo "${PRIVATE_KEY//\\n/$'\n'}" > "$PRIVATE_KEY_FILE"
+mkdir -p "$KEY_DIR"
 
-# Ensure file was written
-if [ ! -s "$PRIVATE_KEY_FILE" ]; then
-  echo "❌ Failed to write private key to $PRIVATE_KEY_FILE"
+echo "🔐 Writing private key to: $KEY_FILE"
+# Replace literal \n with actual newlines
+echo "${PRIVATE_KEY//\\n/$'\n'}" > "$KEY_FILE"
+chmod 600 "$KEY_FILE"
+
+# Validate PKCS#8 format
+if ! openssl pkcs8 -nocrypt -in "$KEY_FILE" -out /dev/null 2>/dev/null; then
+  echo "❌ Invalid private key format. Check your Unity Cloud Build secret."
   exit 1
 fi
 
-chmod 600 "$PRIVATE_KEY_FILE"  # Secure permissions
+echo "✅ Private key saved and validated."
 
-echo "🔐 Private key saved to: $PRIVATE_KEY_FILE"
+# --- Upload with iTMSTransporter (supported tool) ---
+echo "📤 Uploading IPA to TestFlight via iTMSTransporter..."
 
-# Optional: Verify it's valid PEM (helps catch formatting issues)
-if ! openssl pkcs8 -nocrypt -in "$PRIVATE_KEY_FILE" -out /dev/null 2>/dev/null; then
-  echo "❌ Invalid private key format. Check your .p8 file content."
-  exit 1
-fi
-
-# --- Upload to App Store Connect ---
-echo "📤 Uploading IPA to TestFlight..."
-
-if xcrun altool --upload-app \
-  --file "$IPA_PATH" \
-  --type ios \
-  --apiKey "$API_KEY_ID" \
-  --apiIssuer "$ISSUER_ID" \
-  --apiKeyFile "$PRIVATE_KEY_FILE"; then
+if xcrun iTMSTransporter -m upload \
+  -assetFile "$IPA_PATH" \
+  -apiKey "$API_KEY_ID" \
+  -apiIssuer "$ISSUER_ID"; then
   echo "✅ Successfully uploaded to App Store Connect!"
-  echo "📲 View in TestFlight: https://appstoreconnect.apple.com/apps/-/testflight"
+  echo "📲 Your build is now processing. Check TestFlight dashboard:"
+  echo "👉 https://appstoreconnect.apple.com/apps"
 else
-  echo "❌ Upload failed! Check the error above."
+  echo "❌ Upload failed! See error above."
   exit 1
 fi
