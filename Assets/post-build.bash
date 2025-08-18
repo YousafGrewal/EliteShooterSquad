@@ -1,13 +1,13 @@
 #!/bin/bash
 set -euo pipefail
 
-# Ensure fastlane exists
+echo "🚀 Starting upload to App Store Connect..."
+
+# --- Install Fastlane if not present ---
 if ! command -v fastlane &> /dev/null; then
   echo "📦 Installing fastlane..."
   gem install fastlane --no-document
 fi
-
-echo "🚀 Starting upload to App Store Connect..."
 
 # --- Configuration ---
 IPA_DIR="${WORKSPACE:-$PWD}/.build/last"
@@ -18,21 +18,24 @@ if [ -z "$IPA_PATH" ]; then
   IPA_PATH=$(find "$IPA_DIR" -type f -name "*.ipa" | head -n 1 || true)
 fi
 
-API_KEY_ID="${APP_STORE_CONNECT_API_KEY:-}"       # ✅ correct variable
+# Load credentials
+API_KEY_ID="${APP_STORE_CONNECT_API_KEY_ID:-}"
 ISSUER_ID="${APP_STORE_CONNECT_ISSUER_ID:-}"
 PRIVATE_KEY="${APP_STORE_CONNECT_PRIVATE_KEY:-}"
 
 # --- Validate Required Secrets ---
 if [ -z "$API_KEY_ID" ]; then
-  echo "❌ Missing APP_STORE_CONNECT_API_KEY"
+  echo "❌ Missing environment variable: APP_STORE_CONNECT_API_KEY_ID"
   exit 1
 fi
+
 if [ -z "$ISSUER_ID" ]; then
-  echo "❌ Missing APP_STORE_CONNECT_ISSUER_ID"
+  echo "❌ Missing environment variable: APP_STORE_CONNECT_ISSUER_ID"
   exit 1
 fi
+
 if [ -z "$PRIVATE_KEY" ]; then
-  echo "❌ Missing APP_STORE_CONNECT_PRIVATE_KEY"
+  echo "❌ Missing environment variable: APP_STORE_CONNECT_PRIVATE_KEY"
   exit 1
 fi
 
@@ -48,22 +51,27 @@ find "$IPA_DIR" -type f -name "*.ipa" -exec ls -lh {} \;
 # --- Validate IPA File ---
 if [ -z "$IPA_PATH" ] || [ ! -f "$IPA_PATH" ]; then
   echo "❌ No .ipa file found in $IPA_DIR"
-  echo "💡 Ensure Unity build produces an IPA archive."
+  echo "💡 Ensure your Unity or Xcode build produces an IPA archive."
   exit 1
 fi
+
 echo "✅ IPA found: $IPA_PATH"
 
-# --- Save Private Key as JSON for Fastlane ---
+# --- Prepare App Store Connect API Key JSON ---
 KEY_DIR="$HOME/.appstoreconnect"
 KEY_FILE="$KEY_DIR/api_key.json"
 
 mkdir -p "$KEY_DIR"
 
-echo "🔐 Writing App Store Connect API key JSON to: $KEY_FILE"
+echo "🔐 Preparing App Store Connect API key..."
 
-# Decode escaped \n into real newlines
-PRIVATE_KEY=$(echo "$PRIVATE_KEY" | sed 's|\\n|\n|g')
+# Handle case where PRIVATE_KEY has literal '\n' instead of newlines
+if [[ "$PRIVATE_KEY" == *'\\n'* ]]; then
+  echo "🔄 Converting escaped \\n to actual newlines..."
+  PRIVATE_KEY=$(echo "$PRIVATE_KEY" | sed 's|\\n|\n|g')
+fi
 
+# Write JSON file
 cat > "$KEY_FILE" <<EOF
 {
   "key_id": "$API_KEY_ID",
@@ -72,18 +80,33 @@ cat > "$KEY_FILE" <<EOF
 }
 EOF
 
-# Validate JSON
-if ! jq -e . "$KEY_FILE" >/dev/null 2>&1; then
-  echo "❌ Invalid JSON generated in $KEY_FILE"
-  cat "$KEY_FILE"
-  exit 1
+# --- Validate JSON Structure ---
+if ! command -v jq &> /dev/null; then
+  echo "⚠️ Warning: 'jq' not installed. Skipping JSON validation."
+else
+  if ! jq -e . "$KEY_FILE" >/dev/null 2>&1; then
+    echo "❌ Invalid JSON generated in $KEY_FILE"
+    cat "$KEY_FILE"
+    exit 1
+  fi
+  echo "✅ API key JSON is valid."
+fi
+
+# --- Validate Private Key Format ---
+if command -v openssl &> /dev/null; then
+  echo "🔑 Validating private key with OpenSSL..."
+  echo "$PRIVATE_KEY" | openssl ec -noout -text 2>/dev/null || {
+    echo "❌ Failed to parse private key. Is it a valid PKCS#8 EC key?"
+    echo "💡 Tip: Make sure there are no extra spaces or missing newlines."
+    exit 1
+  }
 fi
 
 chmod 600 "$KEY_FILE"
-echo "✅ API key JSON created."
+echo "✅ API key JSON created at: $KEY_FILE"
 
-# --- Upload with Fastlane ---
-echo "📤 Uploading IPA to TestFlight via Fastlane Deliver..."
+# --- Upload to TestFlight ---
+echo "📤 Uploading IPA to App Store Connect via Fastlane..."
 
 if fastlane deliver \
   --api_key_path "$KEY_FILE" \
@@ -91,10 +114,16 @@ if fastlane deliver \
   --skip_metadata true \
   --skip_screenshots true \
   --force; then
+
   echo "✅ Successfully uploaded to App Store Connect!"
-  echo "📲 Your build is now processing. Check TestFlight dashboard:"
+  echo "📲 Your build is now processing. Check TestFlight:"
   echo "👉 https://appstoreconnect.apple.com/apps"
+
 else
-  echo "❌ Upload failed! See error above."
+  echo "❌ Upload to App Store Connect failed!"
+  echo "💡 Common causes:"
+  echo "   • Invalid API key or permissions"
+  echo "   • Expired or malformed private key"
+  echo "   • Network issues or Apple server errors"
   exit 1
 fi
