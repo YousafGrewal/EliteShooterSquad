@@ -10,7 +10,7 @@ if ! command -v fastlane &> /dev/null; then
 fi
 
 # --- Configuration ---
-IPA_DIR="${WORKSPACE:-$PWD}/.build/last}"
+IPA_DIR="${WORKSPACE:-$PWD}/.build/last"   # ✅ Fixed: removed extra }
 IPA_PATH="${IPA_PATH:-}"
 
 # Auto-detect IPA if not provided
