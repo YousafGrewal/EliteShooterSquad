@@ -18,14 +18,14 @@ if [ -z "$IPA_PATH" ]; then
   IPA_PATH=$(find "$IPA_DIR" -type f -name "*.ipa" | head -n 1 || true)
 fi
 
-# Load credentials
-API_KEY_ID="${APP_STORE_CONNECT_PRIVATE_KEY:-}"
+# Load credentials from environment variables
+API_KEY_ID="${APP_STORE_CONNECT_KEY_ID:-}"
 ISSUER_ID="${APP_STORE_CONNECT_ISSUER_ID:-}"
-PRIVATE_KEY="${APP_STORE_CONNECT_PRIVATE_KEY:-}"
+PRIVATE_KEY="${APP_STORE_CONNECT_PRIVATE_KEY:-}"  # Should contain \n for newlines
 
 # --- Validate Required Secrets ---
 if [ -z "$API_KEY_ID" ]; then
-  echo "❌ Missing environment variable: APP_STORE_CONNECT_PRIVATE_KEY"
+  echo "❌ Missing environment variable: APP_STORE_CONNECT_KEY_ID"
   exit 1
 fi
 
@@ -60,30 +60,29 @@ echo "✅ IPA found: $IPA_PATH"
 # --- Prepare App Store Connect API Key JSON ---
 KEY_DIR="$HOME/.appstoreconnect"
 KEY_FILE="$KEY_DIR/api_key.json"
+KEY_P8_FILE="$KEY_DIR/AuthKey.p8"
 
 mkdir -p "$KEY_DIR"
 
 echo "🔐 Preparing App Store Connect API key..."
 
-# Handle case where PRIVATE_KEY has literal '\n' instead of newlines
-if [[ "$PRIVATE_KEY" == *'\\n'* ]]; then
-  echo "🔄 Converting escaped \\n to actual newlines..."
-  PRIVATE_KEY=$(echo "$PRIVATE_KEY" | sed 's|\\n|\n|g')
-fi
+# Convert escaped \n to actual newlines
+PRIVATE_KEY_PROCESSED=$(echo -e "${PRIVATE_KEY}")
 
-# Write JSON file
+# Write the private key to a .p8 file (required by Fastlane/App Store Connect)
+cat > "$KEY_P8_FILE" <<< "$PRIVATE_KEY_PROCESSED"
+
+# Write JSON config for Fastlane (with embedded key)
 cat > "$KEY_FILE" <<EOF
 {
   "key_id": "$API_KEY_ID",
   "issuer_id": "$ISSUER_ID",
-  "key": "$PRIVATE_KEY"
+  "key": "$PRIVATE_KEY_PROCESSED"
 }
 EOF
 
-# --- Validate JSON Structure ---
-if ! command -v jq &> /dev/null; then
-  echo "⚠️ Warning: 'jq' not installed. Skipping JSON validation."
-else
+# Validate JSON
+if command -v jq &> /dev/null; then
   if ! jq -e . "$KEY_FILE" >/dev/null 2>&1; then
     echo "❌ Invalid JSON generated in $KEY_FILE"
     cat "$KEY_FILE"
@@ -94,18 +93,27 @@ fi
 
 # --- Validate Private Key Format ---
 if command -v openssl &> /dev/null; then
-  echo "🔑 Validating private key with OpenSSL..."
-  echo "$PRIVATE_KEY" | openssl ec -noout -text 2>/dev/null || {
+  echo "🔑 Validating private key (PKCS#8 format)..."
+  echo "$PRIVATE_KEY_PROCESSED" | openssl pkcs8 -noout -text 2>/dev/null || {
     echo "❌ Failed to parse private key. Is it a valid PKCS#8 EC key?"
-    echo "💡 Tip: Make sure there are no extra spaces or missing newlines."
+    echo "📎 Common issues:"
+    echo "   • The key is missing newlines (ensure \\n is used and processed with echo -e)"
+    echo "   • Extra spaces or text around the key"
+    echo "   • Using a certificate (.pem) instead of a .p8 private key"
+    echo "   • Key was corrupted during copy-paste"
+    echo ""
+    echo "Preview of processed key:"
+    echo "$PRIVATE_KEY_PROCESSED" | cat -A  # Show hidden chars
     exit 1
   }
+  echo "✅ Private key validated successfully."
 fi
 
+chmod 600 "$KEY_P8_FILE"
 chmod 600 "$KEY_FILE"
-echo "✅ API key JSON created at: $KEY_FILE"
+echo "✅ API key files created at: $KEY_P8_FILE and $KEY_FILE"
 
-# --- Upload to TestFlight ---
+# --- Upload to App Store Connect ---
 echo "📤 Uploading IPA to App Store Connect via Fastlane..."
 
 if fastlane deliver \
@@ -122,8 +130,9 @@ if fastlane deliver \
 else
   echo "❌ Upload to App Store Connect failed!"
   echo "💡 Common causes:"
-  echo "   • Invalid API key or permissions"
-  echo "   • Expired or malformed private key"
-  echo "   • Network issues or Apple server errors"
+  echo "   • Invalid API key ID, issuer ID, or permissions"
+  echo "   • Expired, malformed, or misformatted private key"
+  echo "   • Network issues or Apple server outages"
+  echo "   • Bundle ID mismatch or app not registered in App Store Connect"
   exit 1
 fi
