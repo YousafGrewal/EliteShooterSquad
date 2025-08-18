@@ -18,7 +18,7 @@ if [ -z "$IPA_PATH" ]; then
   IPA_PATH=$(find "$IPA_DIR" -type f -name "*.ipa" | head -n 1 || true)
 fi
 
-# Load credentials from environment variables
+# Load credentials
 API_KEY_ID="${APP_STORE_CONNECT_KEY_ID:-}"
 ISSUER_ID="${APP_STORE_CONNECT_ISSUER_ID:-}"
 PRIVATE_KEY="${APP_STORE_CONNECT_PRIVATE_KEY:-}"  # Should contain \n for newlines
@@ -57,71 +57,61 @@ fi
 
 echo "✅ IPA found: $IPA_PATH"
 
-# --- Prepare App Store Connect API Key JSON ---
+# --- Prepare App Store Connect API Key (.p8 file) ---
 KEY_DIR="$HOME/.appstoreconnect"
-KEY_FILE="$KEY_DIR/api_key.json"
 KEY_P8_FILE="$KEY_DIR/AuthKey.p8"
 
 mkdir -p "$KEY_DIR"
 
-echo "🔐 Preparing App Store Connect API key..."
+echo "🔐 Preparing App Store Connect API key (.p8)..."
 
 # Convert escaped \n to actual newlines
-PRIVATE_KEY_PROCESSED=$(echo -e "${PRIVATE_KEY}")
+echo -e "${PRIVATE_KEY}" > "$KEY_P8_FILE"
 
-# Write the private key to a .p8 file (required by Fastlane/App Store Connect)
-cat > "$KEY_P8_FILE" <<< "$PRIVATE_KEY_PROCESSED"
-
-# Write JSON config for Fastlane (with embedded key)
-cat > "$KEY_FILE" <<EOF
-{
-  "key_id": "$API_KEY_ID",
-  "issuer_id": "$ISSUER_ID",
-  "key": "$PRIVATE_KEY_PROCESSED"
-}
-EOF
-
-# Validate JSON
-if command -v jq &> /dev/null; then
-  if ! jq -e . "$KEY_FILE" >/dev/null 2>&1; then
-    echo "❌ Invalid JSON generated in $KEY_FILE"
-    cat "$KEY_FILE"
-    exit 1
-  fi
-  echo "✅ API key JSON is valid."
+# Verify file was created
+if [ ! -f "$KEY_P8_FILE" ] || [ ! -s "$KEY_P8_FILE" ]; then
+  echo "❌ Failed to write private key to $KEY_P8_FILE"
+  exit 1
 fi
+
+echo "✅ Wrote API key to: $KEY_P8_FILE"
 
 # --- Validate Private Key Format ---
 if command -v openssl &> /dev/null; then
   echo "🔑 Validating private key (PKCS#8 format)..."
-  echo "$PRIVATE_KEY_PROCESSED" | openssl pkcs8 -noout -text 2>/dev/null || {
-    echo "❌ Failed to parse private key. Is it a valid PKCS#8 EC key?"
+  if openssl pkcs8 -noout -text < "$KEY_P8_FILE" 2>/dev/null; then
+    echo "✅ Private key is valid PKCS#8 format."
+  else
+    echo "❌ Failed to parse private key. Must be a valid PKCS#8 EC key."
     echo "📎 Common issues:"
-    echo "   • The key is missing newlines (ensure \\n is used and processed with echo -e)"
-    echo "   • Extra spaces or text around the key"
-    echo "   • Using a certificate (.pem) instead of a .p8 private key"
-    echo "   • Key was corrupted during copy-paste"
+    echo "   • The key is not from a .p8 file"
+    echo "   • Extra text or spaces around the key"
+    echo "   • Newlines not properly converted (\n not processed)"
+    echo "   • Using a certificate instead of a private key"
     echo ""
-    echo "Preview of processed key:"
-    echo "$PRIVATE_KEY_PROCESSED" | cat -A  # Show hidden chars
+    echo "📄 Preview of key file:"
+    cat "$KEY_P8_FILE" | cat -A  # Show hidden characters
     exit 1
-  }
-  echo "✅ Private key validated successfully."
+  fi
+else
+  echo "⚠️ Warning: 'openssl' not available. Skipping key validation."
 fi
 
 chmod 600 "$KEY_P8_FILE"
-chmod 600 "$KEY_FILE"
-echo "✅ API key files created at: $KEY_P8_FILE and $KEY_FILE"
+echo "🔒 Permissions set to 600 on $KEY_P8_FILE"
 
 # --- Upload to App Store Connect ---
 echo "📤 Uploading IPA to App Store Connect via Fastlane..."
 
 if fastlane deliver \
-  --api_key_path "$KEY_FILE" \
+  --api_key_path "$KEY_P8_FILE" \
+  --key_id "$API_KEY_ID" \
+  --issuer_id "$ISSUER_ID" \
   --ipa "$IPA_PATH" \
   --skip_metadata true \
   --skip_screenshots true \
-  --force; then
+  --force \
+  --verbose; then
 
   echo "✅ Successfully uploaded to App Store Connect!"
   echo "📲 Your build is now processing. Check TestFlight:"
@@ -132,7 +122,7 @@ else
   echo "💡 Common causes:"
   echo "   • Invalid API key ID, issuer ID, or permissions"
   echo "   • Expired, malformed, or misformatted private key"
-  echo "   • Network issues or Apple server outages"
-  echo "   • Bundle ID mismatch or app not registered in App Store Connect"
+  echo "   • Network issues or Apple server errors"
+  echo "   • Bundle ID does not match the app in App Store Connect"
   exit 1
 fi
