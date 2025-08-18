@@ -237,7 +237,7 @@ Material:
     - _RampMax: {r: 1, g: 1, b: 1, a: 1}
     - _RampMin: {r: 1, g: 1, b: 1, a: 1}
     - _RimColor: {r: 0.5849056, g: 0.5849056, b: 0.5849056, a: 0.5882353}
-    - _SColor: {r: 1, g: 1, b: 1, a: 1}
+    - _SColor: {r: 0.49056602, g: 0.46511212, b: 0.46511212, a: 1}
     - _Shine_Color: {r: 0.9716981, g: 0.28426358, b: 0.23375754, a: 1}
     - _SpecularMax: {r: 1, g: 1, b: 1, a: 1}
     - _SpecularMin: {r: 0, g: 0, b: 0, a: 0}

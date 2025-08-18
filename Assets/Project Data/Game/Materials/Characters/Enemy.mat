@@ -159,7 +159,7 @@ Material:
     - _Metallic: 0
     - _Occlusion: 0
     - _OcclusionStrength: 1
-    - _OutlineDepthOffset: 0.04
+    - _OutlineDepthOffset: 0.1
     - _OutlineEnabled: 1
     - _OutlineOn: 1
     - _OutlineScale: 1
