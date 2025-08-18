@@ -19,13 +19,13 @@ if [ -z "$IPA_PATH" ]; then
 fi
 
 # Load credentials
-API_KEY_ID="${APP_STORE_CONNECT_API_KEY_ID:-}"
+API_KEY_ID="${APP_STORE_CONNECT_PRIVATE_KEY:-}"
 ISSUER_ID="${APP_STORE_CONNECT_ISSUER_ID:-}"
 PRIVATE_KEY="${APP_STORE_CONNECT_PRIVATE_KEY:-}"
 
 # --- Validate Required Secrets ---
 if [ -z "$API_KEY_ID" ]; then
-  echo "❌ Missing environment variable: APP_STORE_CONNECT_API_KEY_ID"
+  echo "❌ Missing environment variable: APP_STORE_CONNECT_PRIVATE_KEY"
   exit 1
 fi
 
