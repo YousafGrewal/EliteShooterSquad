@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euo pipefail  # safer strict mode
+set -euo pipefail
 
 # Ensure fastlane exists
 if ! command -v fastlane &> /dev/null; then
@@ -18,7 +18,7 @@ if [ -z "$IPA_PATH" ]; then
   IPA_PATH=$(find "$IPA_DIR" -type f -name "*.ipa" | head -n 1 || true)
 fi
 
-API_KEY_ID="${APP_STORE_CONNECT_API_KEY:-}"
+API_KEY_ID="${APP_STORE_CONNECT_API_KEY:-}"       # ✅ correct variable
 ISSUER_ID="${APP_STORE_CONNECT_ISSUER_ID:-}"
 PRIVATE_KEY="${APP_STORE_CONNECT_PRIVATE_KEY:-}"
 
@@ -51,27 +51,36 @@ if [ -z "$IPA_PATH" ] || [ ! -f "$IPA_PATH" ]; then
   echo "💡 Ensure Unity build produces an IPA archive."
   exit 1
 fi
-
 echo "✅ IPA found: $IPA_PATH"
 
-# --- Save Private Key ---
-KEY_DIR="$HOME/.appstoreconnect/private_keys"
-KEY_FILE="$KEY_DIR/AuthKey_$API_KEY_ID.p8"
+# --- Save Private Key as JSON for Fastlane ---
+KEY_DIR="$HOME/.appstoreconnect"
+KEY_FILE="$KEY_DIR/api_key.json"
 
 mkdir -p "$KEY_DIR"
 
-echo "🔐 Writing private key to: $KEY_FILE"
-# Replace literal \n with actual newlines
-echo "${PRIVATE_KEY//\\n/$'\n'}" > "$KEY_FILE"
-chmod 600 "$KEY_FILE"
+echo "🔐 Writing App Store Connect API key JSON to: $KEY_FILE"
 
-# Validate PKCS#8 format
-if ! openssl pkcs8 -nocrypt -in "$KEY_FILE" -out /dev/null 2>/dev/null; then
-  echo "❌ Invalid private key format. Check your Unity Cloud Build secret."
+# Decode escaped \n into real newlines
+PRIVATE_KEY=$(echo "$PRIVATE_KEY" | sed 's|\\n|\n|g')
+
+cat > "$KEY_FILE" <<EOF
+{
+  "key_id": "$API_KEY_ID",
+  "issuer_id": "$ISSUER_ID",
+  "key": "$PRIVATE_KEY"
+}
+EOF
+
+# Validate JSON
+if ! jq -e . "$KEY_FILE" >/dev/null 2>&1; then
+  echo "❌ Invalid JSON generated in $KEY_FILE"
+  cat "$KEY_FILE"
   exit 1
 fi
 
-echo "✅ Private key saved and validated."
+chmod 600 "$KEY_FILE"
+echo "✅ API key JSON created."
 
 # --- Upload with Fastlane ---
 echo "📤 Uploading IPA to TestFlight via Fastlane Deliver..."
